@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Report Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Custom Report Generator</h1>
+  <div class="container">
+    <div class="metric-selection">
+      <h3>Select Metrics:</h3>
+      <div>
+        <input type="checkbox" id="masterID" value="Master-O ID"> Master-O ID
+      </div>
+      <div>
+        <input type="checkbox" id="count" value="Count"> Count
+      </div>
+      <div>
+        <input type="checkbox" id="completionStatus" value="Completion Status"> Completion Status
+      </div>
+      <div>
+        <input type="checkbox" id="score" value="Score"> Score
+      </div>
+      <div>
+        <input type="checkbox" id="timeSpent" value="Time Spent"> Time Spent
+      </div>
+      <button onclick="generateReport()">Generate Report</button>
+    </div>
+    <div class="report-output">
+      <h3>Generated Report</h3>
+      <canvas id="chart"></canvas>
+      <button onclick="downloadCSV()">Download CSV</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
